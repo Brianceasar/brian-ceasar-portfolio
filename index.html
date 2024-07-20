@@ -496,7 +496,7 @@
 			<div class="row">					
 				<div class="offset-lg-1 col-lg-10 col-sm-12 col-xs-12 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.2s" data-wow-offset="0">
 					<div class="contact">
-						<form class="form" action="https://forms.gle/VoUnkpLqozu652xZ8" method="post" target="_self">
+						<form class="form" action="https://script.google.com/macros/s/AKfycbxPBs4SCxi8ws9J-9hbqr8nTVlE0HPpTvI2oi1hPn-FccIm_J6k6owFmyI7do6497CF/exec" method="post" target="_self">
 							<div class="row">
 								<div class="form-group col-md-6">
 									<label>Name</label>
@@ -587,6 +587,30 @@
 			  "outerHeight": 30
 			}
 			magicMouse(options);
-		</script>			
+		</script>		
+		<script>
+			document.getElementById('contactForm').addEventListener('submit', function(e) {
+			  e.preventDefault();
+			  
+			  const form = e.target;
+			  const formData = new FormData(form);
+		  
+			  fetch(form.action, {
+				method: 'POST',
+				body: formData,
+			  }).then(response => response.json())
+				.then(data => {
+				  if (data.result === 'success') {
+					alert('Message sent successfully!');
+					form.reset();
+				  } else {
+					alert('There was an error sending your message. Please try again.');
+				  }
+				}).catch(error => {
+				  console.error('Error:', error);
+				  alert('There was an error sending your message. Please try again.');
+				});
+			});
+		  </script>	
 </body>
 </html>
