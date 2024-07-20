@@ -2,7 +2,7 @@ body #magicMouseCursor {
   position: fixed;
   width: 150px;
   height: 150px;
-  border: 2px solid #2eca7f;
+  border: 2px solid #B00D1C;
   background:none;
   border-radius: 50%;
   z-index: 9999;
@@ -19,17 +19,17 @@ body #magicPointer {
   top: 0;
   left: 0;
   position: fixed;
-  background: #2eca7f;
+  background: #B00D1C;
   border-radius: 50%;
   pointer-events: none;
   transition: background 0.2s, width 0.2s, height 0.2s, box-shadow 0.2s; }
   body #magicPointer.is-hover {
-    background: red; }
+    background: #E01023; }
   body #magicPointer.pointer-blur {
     height: 70px;
     width: 70px;
     background: none;
-    border: 2px solid #2eca7f; }
+    border: 2px solid #E01023; }
   body #magicPointer.pointer-overlay {
     height: 150px;
     width: 150px;
