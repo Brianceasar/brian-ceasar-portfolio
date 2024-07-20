@@ -496,32 +496,46 @@
 			<div class="row">					
 				<div class="offset-lg-1 col-lg-10 col-sm-12 col-xs-12 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.2s" data-wow-offset="0">
 					<div class="contact">
-						<form class="form" action="https://script.google.com/macros/s/AKfycbxPBs4SCxi8ws9J-9hbqr8nTVlE0HPpTvI2oi1hPn-FccIm_J6k6owFmyI7do6497CF/exec" method="post" target="_self">
+						<form id="contactForm" class="form" onsubmit="sendEmail(event)">
 							<div class="row">
-								<div class="form-group col-md-6">
-									<label>Name</label>
-									<input type="text" name="entry.2005620554" class="form-control" placeholder="Your Name" required="required">
-								</div>
-								<div class="form-group col-md-6">
-									<label>Your Email</label>
-									<input type="email" name="entry.1045781291" class="form-control" placeholder="Your Email" required="required">
-								</div>
-								<div class="form-group col-md-12">
-									<label>Your Subject</label>
-									<input type="text" name="entry.839337160" class="form-control" placeholder="Subject" required="required">
-								</div>
-								<div class="form-group col-md-12">
-									<label>Your Message</label>
-									<textarea rows="6" name="entry.1166974658" class="form-control" placeholder="Your Message" required="required"></textarea>
-								</div>
-								<div class="col-md-12 text-center">
-									<button type="submit" value="Send message" class="home_btn" title="Submit Your Message!">Send Message</button>
-								</div>
+							  <div class="form-group col-md-6">
+								<label>Name</label>
+								<input type="text" id="name" class="form-control" placeholder="Your Name" required="required">
+							  </div>
+							  <div class="form-group col-md-6">
+								<label>Your Email</label>
+								<input type="email" id="email" class="form-control" placeholder="Your Email" required="required">
+							  </div>
+							  <div class="form-group col-md-12">
+								<label>Your Subject</label>
+								<input type="text" id="subject" class="form-control" placeholder="Subject" required="required">
+							  </div>
+							  <div class="form-group col-md-12">
+								<label>Your Message</label>
+								<textarea rows="6" id="message" class="form-control" placeholder="Your Message" required="required"></textarea>
+							  </div>
+							  <div class="col-md-12 text-center">
+								<button type="submit" value="Send message" class="home_btn" title="Submit Your Message!">Send Message</button>
+							  </div>
 							</div>
-						</form>
+						  </form>
 					</div>
 				</div><!-- END COL  -->				
-			</div><!-- END ROW -->				
+			</div><!-- END ROW -->	
+			<script>
+				function sendEmail(event) {
+				  event.preventDefault();
+				  
+				  const name = document.getElementById('name').value;
+				  const email = document.getElementById('email').value;
+				  const subject = document.getElementById('subject').value;
+				  const message = document.getElementById('message').value;
+			  
+				  const mailtoLink = `mailto:brianceasar7@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent('Name: ' + name + '\nEmail: ' + email + '\n\nMessage:\n' + message)}`;
+			  
+				  window.location.href = mailtoLink;
+				}
+			  </script>			
 		</div><!--- END CONTAINER -->
 	</div>
 	<!-- END CONTACT -->	
@@ -588,29 +602,6 @@
 			}
 			magicMouse(options);
 		</script>		
-		<script>
-			document.getElementById('contactForm').addEventListener('submit', function(e) {
-			  e.preventDefault();
-			  
-			  const form = e.target;
-			  const formData = new FormData(form);
-		  
-			  fetch(form.action, {
-				method: 'POST',
-				body: formData,
-			  }).then(response => response.json())
-				.then(data => {
-				  if (data.result === 'success') {
-					alert('Message sent successfully!');
-					form.reset();
-				  } else {
-					alert('There was an error sending your message. Please try again.');
-				  }
-				}).catch(error => {
-				  console.error('Error:', error);
-				  alert('There was an error sending your message. Please try again.');
-				});
-			});
-		  </script>	
+			
 </body>
 </html>
