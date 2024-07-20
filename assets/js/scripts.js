@@ -1,6 +1,5 @@
 /*
-Author       : themes_master
-Template Name: Janu - Personal Portfolio Template
+Author       : brian-ceasar
 Version      : 1.0
 */
 (function($) {
@@ -93,12 +92,12 @@ Version      : 1.0
 	});	
 	
 	/*Image Popup*/
-		$('.gallery_enlarge_icon').magnificPopup({
-		 type:'image',
-			gallery:{
-			enabled:true
-			 }
-		});	
+		// $('.gallery_enlarge_icon').magnificPopup({
+		//  type:'image',
+		// 	gallery:{
+		// 	enabled:true
+		// 	 }
+		// });	
 	}); 
 
 	/*START WOW ANIMATION JS*/
