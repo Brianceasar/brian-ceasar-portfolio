@@ -7,9 +7,12 @@ import {
   Database,
   Settings2,
   Image as ImageIcon,
+  LucideIcon,
 } from 'lucide-react';
 import IconWrapper from '@/components/common/IconWrapper';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
+
 
 type Service = {
   icon: LucideIcon;
@@ -84,6 +87,13 @@ export default function Services() {
             </div>
           ))}
         </div>
+        <div className="text-center pt-12">
+            
+              <button type="submit" className="bg-[#B00D1C] text-white px-6 py-3 rounded-full hover:bg-white hover:text-[#B00D1C] border border-[#B00D1C] transition">
+                <Link href="/services">view All Services</Link>
+              </button>
+            
+          </div>
       </div>
     </motion.section>
   );
