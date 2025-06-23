@@ -63,7 +63,7 @@ export default function Navbar() {
             href="#contact"
             className="ml-4 bg-[#B00D1C] text-white px-6 py-2.5 rounded-full text-sm font-medium hover:bg-[#D51515] hover:shadow-lg hover:shadow-[#B00D1C]/25 transition-all duration-300 transform hover:-translate-y-0.5"
           >
-            Let's Talk
+            Let&apos;s Talk
           </a>
         </nav>
 
@@ -107,7 +107,7 @@ export default function Navbar() {
               onClick={() => setIsOpen(false)}
               className="bg-[#B00D1C] text-white px-6 py-3 rounded-full text-sm font-medium hover:bg-[#D51515] transition-all duration-300 text-center mt-2"
             >
-              Let's Talk
+              Let&apos;s Talk
             </a>
           </div>
         </nav>

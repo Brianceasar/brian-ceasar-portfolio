@@ -124,7 +124,7 @@ export default function Hero() {
           <div className="space-y-8">
             <motion.div variants={itemVariants} className="space-y-4">
               <div className="space-y-2 pt-5">
-                <span className="text-[#B00D1C] text-lg font-semibold tracking-wide">Hello, I'm</span>
+                <span className="text-[#B00D1C] text-lg font-semibold tracking-wide">Hello, I&apos;m</span>
                 <h1 className="text-5xl md:text-7xl font-bold text-gray-900 leading-tight">
                   Brian{' '}
                   <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#B00D1C] to-[#D51515]">
@@ -179,7 +179,7 @@ export default function Hero() {
                 href="#contact"
                 className="group flex items-center gap-2 bg-white/80 backdrop-blur-sm border-2 border-[#B00D1C]/20 text-gray-700 px-8 py-4 rounded-full font-semibold hover:bg-[#B00D1C] hover:text-white hover:border-[#B00D1C] transition-all duration-300 transform hover:-translate-y-1"
               >
-                Let's Connect
+                Let&apos;s Connect
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </Link>
             </motion.div>

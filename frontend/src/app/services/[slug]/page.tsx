@@ -1,16 +1,15 @@
-
-
 import { services } from '@/data/services';
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
 
 type Props = {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 };
 
-export default function ServiceDetailPage({ params }: Props) {
-  const service = services.find((s) => s.slug === params.slug);
+export default async function ServiceDetailPage({ params }: Props) {
+  const { slug } = await params;
+  const service = services.find((s) => s.slug === slug);
   if (!service) return notFound();
 
   return (
@@ -89,7 +88,8 @@ export async function generateStaticParams() {
 
 // Set dynamic metadata
 export async function generateMetadata({ params }: Props) {
-  const service = services.find((s) => s.slug === params.slug);
+  const { slug } = await params;
+  const service = services.find((s) => s.slug === slug);
   
   return {
     title: `${service?.title} | Your Name`,
