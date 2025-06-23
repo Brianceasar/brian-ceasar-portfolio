@@ -10,12 +10,18 @@ import {
   SiTailwindcss,
   SiNodedotjs,
   SiPython,
-  
   SiPostgresql
 } from 'react-icons/si';
-import {FaJava} from 'react-icons/fa';
+import { FaJava } from 'react-icons/fa';
+import { useEffect, useState } from 'react';
 
 export default function Hero() {
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -39,7 +45,7 @@ export default function Hero() {
   };
 
   // Tech icons for floating background
-  const techIcons = [SiReact, SiTypescript, SiNextdotjs, SiTailwindcss,FaJava, SiNodedotjs, SiPython, SiPostgresql];
+  const techIcons = [SiReact, SiTypescript, SiNextdotjs, SiTailwindcss, FaJava, SiNodedotjs, SiPython, SiPostgresql];
 
   // Tech stack data
   const techStack = [
@@ -53,6 +59,18 @@ export default function Hero() {
     { name: 'PostgreSQL', color: 'bg-blue-700', icon: SiPostgresql }
   ];
 
+  // Fixed positions for floating icons to avoid hydration mismatch
+  const floatingIconPositions = [
+    { left: '10%', top: '20%', delay: 0.7, duration: 5 },
+    { left: '85%', top: '30%', delay: 1.4, duration: 6 },
+    { left: '25%', top: '70%', delay: 2.1, duration: 4 },
+    { left: '70%', top: '15%', delay: 0, duration: 7 },
+    { left: '15%', top: '50%', delay: 1.7, duration: 5.5 },
+    { left: '60%', top: '80%', delay: 0.3, duration: 6.5 },
+    { left: '40%', top: '25%', delay: 1.0, duration: 4.5 },
+    { left: '90%', top: '60%', delay: 1.5, duration: 5 }
+  ];
+
   return (
     <section id="home" className="relative min-h-screen flex items-center overflow-hidden">
       {/* Background with gradient and animated elements */}
@@ -61,33 +79,35 @@ export default function Hero() {
         <div className="absolute bottom-20 right-10 w-96 h-96 bg-purple-400/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
       </div>
 
-      {/* Floating tech icons */}
-      <div className="absolute inset-0 overflow-hidden">
-        {[...Array(8)].map((_, i) => {
-          const IconComponent = techIcons[i % techIcons.length];
-          return (
-            <div
-              key={i}
-              className="absolute animate-float"
-              style={{
-                left: `${Math.random() * 100}%`,
-                top: `${Math.random() * 100}%`,
-                animationDelay: `${i * 0.7}s`,
-                animationDuration: `${4 + Math.random() * 3}s`
-              }}
-            >
-              <IconComponent className="w-5 h-5 text-[#B00D1C]/15 rotate-12" />
-            </div>
-          );
-        })}
-      </div>
+      {/* Floating tech icons - Only render on client */}
+      {isMounted && (
+        <div className="absolute inset-0 overflow-hidden">
+          {floatingIconPositions.map((pos, i) => {
+            const IconComponent = techIcons[i % techIcons.length];
+            return (
+              <div
+                key={i}
+                className="absolute animate-float"
+                style={{
+                  left: pos.left,
+                  top: pos.top,
+                  animationDelay: `${pos.delay}s`,
+                  animationDuration: `${pos.duration}s`
+                }}
+              >
+                <IconComponent className="w-5 h-5 text-[#B00D1C]/15 rotate-12" />
+              </div>
+            );
+          })}
+        </div>
+      )}
 
-      {/* Binary code pattern */}
+      {/* Binary code pattern - Fixed content to avoid hydration issues */}
       <div className="absolute inset-0 overflow-hidden opacity-5">
         <div className="absolute top-0 left-0 text-xs font-mono text-gray-400 leading-relaxed transform rotate-12">
-          {Array.from({ length: 50 }, (_, i) => (
-            <div key={i} className="animate-pulse" style={{ animationDelay: `${i * 0.1}s` }}>
-              {Math.random().toString(2).substr(2, 20)}
+          {Array.from({ length: 8 }, (_, i) => (
+            <div key={i} className="animate-pulse" style={{ animationDelay: `${i * 0.5}s` }}>
+              {i % 2 === 0 ? '10101010101010101010' : '01010101010101010101'}
             </div>
           ))}
         </div>
@@ -112,7 +132,6 @@ export default function Hero() {
                   </span>
                 </h1>
                 <div className="flex items-center gap-3 text-xl md:text-2xl font-medium text-gray-700">
-                  {/* <SiReact className="w-6 h-6 text-[#B00D1C]" /> */}
                   <span>Front-End Engineer</span>
                 </div>
                 <p className="text-gray-500 font-medium">Based in Tanzania 🇹🇿</p>
@@ -172,10 +191,6 @@ export default function Hero() {
             className="relative"
           >
             <div className="relative bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20">
-              {/* <div className="absolute -top-6 -right-6 w-12 h-12 bg-[#B00D1C] rounded-full flex items-center justify-center">
-                <SiReact className="w-6 h-6 text-white" />
-              </div> */}
-              
               <h3 className="text-xl font-bold text-gray-800 mb-6">Tech Stack</h3>
               
               <div className="grid grid-cols-3 gap-4">
@@ -198,16 +213,6 @@ export default function Hero() {
           </motion.div>
         </motion.div>
       </div>
-
-      {/* Scroll indicator */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1.5 }}
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
-      >
-        
-      </motion.div>
     </section>
   );
 }
