@@ -1,70 +1,9 @@
 'use client';
 
-import {
-  Code2,
-  Paintbrush,
-  Smartphone,
-  Database,
-  Settings2,
-  Image as ImageIcon,
-  LucideIcon,
-} from 'lucide-react';
+import { services } from '@/data/services';
 import IconWrapper from '@/components/common/IconWrapper';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-
-type Service = {
-  icon: LucideIcon;
-  title: string;
-  description: string;
-  color: string;
-  stats?: string;
-};
-
-const services: Service[] = [
-  {
-    icon: Settings2,
-    title: 'Software Project Management',
-    description: 'Managing software projects and leading teams to deliver high-quality solutions.',
-    color: '#B00D1C',
-    stats: '5 projects managed'
-  },
-  {
-    icon: Code2,
-    title: 'Front-end Development',
-    description: 'Building responsive and user-friendly web apps using React and Tailwind CSS.',
-    color: '#d94da6',
-    stats: '10+ projects completed'
-  },
-  {
-    icon: Paintbrush,
-    title: 'UI/UX Design',
-    description: 'Creating intuitive and beautiful user interfaces and experiences.',
-    color: '#307ad5',
-    stats: '10+ designs delivered'
-  },
-  {
-    icon: Database,
-    title: 'Database Management',
-    description: 'Managing and optimizing SQL and NoSQL databases efficiently.',
-    color: '#eab830',
-    stats: '3 database systems'
-  },
-  {
-    icon: ImageIcon,
-    title: 'Graphic Design',
-    description: 'Designing visual assets for digital/print using tools like Photoshop and Figma.',
-    color: '#ff1949',
-    stats: '100+ assets created'
-  },
-  {
-    icon: Smartphone,
-    title: 'App Development',
-    description: 'Developing cross-platform and native mobile applications.',
-    color: '#10bcc4',
-    stats: '2 apps built'
-  },
-];
 
 export default function Services() {
   return (
@@ -91,28 +30,31 @@ export default function Services() {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              viewport={{ once: true, margin: "-50px" }}
-              className="bg-white p-8 rounded-xl shadow-md border border-gray-100 
-                         hover:-translate-y-1 hover:shadow-lg hover:border-[color:var(--service-color)] 
-                         group transition-all"
-              style={{ "--service-color": service.color } as React.CSSProperties}
+            <Link
+              key={service.slug}
+              href={`/services/${service.slug}`}
+              className="group"
             >
-              <IconWrapper icon={service.icon} color={service.color} />
-              <h3 className="text-xl font-semibold mb-2 group-hover:text-[color:var(--service-color)] transition-colors">
-                {service.title}
-              </h3>
-              <p className="text-gray-600 mb-3">{service.description}</p>
-              {service.stats && (
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true, margin: "-50px" }}
+                className="bg-white p-8 rounded-xl shadow-md border border-gray-100 
+                           hover:-translate-y-1 hover:shadow-lg hover:border-[color:var(--service-color)] 
+                           transition-all"
+                style={{ "--service-color": service.color } as React.CSSProperties}
+              >
+                <IconWrapper icon={service.icon} color={service.color} />
+                <h3 className="text-xl font-semibold mb-2 group-hover:text-[color:var(--service-color)] transition-colors">
+                  {service.title}
+                </h3>
+                <p className="text-gray-600 mb-3">{service.description}</p>
                 <p className="text-sm font-medium text-[color:var(--service-color)]">
-                  {service.stats}
+                  {service.samples.length} projects
                 </p>
-              )}
-            </motion.div>
+              </motion.div>
+            </Link>
           ))}
         </div>
 

@@ -1,3 +1,5 @@
+
+
 import { services } from '@/data/services';
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
@@ -40,10 +42,9 @@ export default function ServiceDetailPage({ params }: Props) {
         <h2 className="text-2xl font-bold mb-6">Sample Works</h2>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {service.samples.map((project) => (
-            <Link
+            <div
               key={project.slug}
-              href={`/services/${service.slug}/${project.slug}`}
-              className="group rounded-lg overflow-hidden shadow border hover:shadow-lg transition"
+              className="group rounded-lg overflow-hidden shadow border hover:shadow-lg transition bg-white"
             >
               <Image
                 src={project.img}
@@ -53,14 +54,48 @@ export default function ServiceDetailPage({ params }: Props) {
                 className="w-full h-52 object-cover"
               />
               <div className="p-4">
-                <h3 className="font-semibold text-md group-hover:text-[#B00D1C] transition">
+                <h3 className="font-semibold text-lg group-hover:text-[#B00D1C] transition">
                   {project.title}
                 </h3>
+                <p className="text-sm text-gray-500 mb-1">Client: {project.client}</p>
+                <p className="text-sm text-gray-600 mb-2">{project.content}</p>
+                <div className="text-xs text-gray-700 mb-1">
+                  <strong>Tech Stack:</strong> {project.techStack?.join(', ') || 'N/A'}
+                </div>
+                <div className="text-xs text-green-700">
+                  <strong>Achievement:</strong> {project.achievement}
+                </div>
+                <Link
+                  href={`/services/${service.slug}/${project.slug}`}
+                  className="inline-block mt-3 text-[#B00D1C] hover:underline text-sm"
+                >
+                  View Details →
+                </Link>
               </div>
-            </Link>
+            </div>
           ))}
         </div>
       </div>
     </section>
   );
+}
+
+// Generate static paths for SSG
+export async function generateStaticParams() {
+  return services.map((service) => ({
+    slug: service.slug,
+  }));
+}
+
+// Set dynamic metadata
+export async function generateMetadata({ params }: Props) {
+  const service = services.find((s) => s.slug === params.slug);
+  
+  return {
+    title: `${service?.title} | Your Name`,
+    description: service?.description,
+    openGraph: {
+      images: [service?.coverImage],
+    },
+  };
 }
