@@ -58,7 +58,7 @@ export default function Services() {
           ))}
         </div>
 
-        <div className="text-center pt-12">
+        {/* <div className="text-center pt-12">
           <motion.button 
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
@@ -68,7 +68,7 @@ export default function Services() {
           >
             <Link href="/services">View All Services</Link>
           </motion.button>
-        </div>
+        </div> */}
       </div>
     </motion.section>
   );

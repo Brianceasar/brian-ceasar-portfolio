@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import '../../styles/globals.css'; // Tailwind
 import '../../styles/legacy.css';   // Your custom styles
+import Navbar from '../components/Navbar/Navbar';
+import Footer from '../components/Footer/Footer';
+
 
 const poppins = Poppins({
   variable: "--font-poppins",
@@ -34,7 +37,9 @@ export default function RootLayout({
         className={`${poppins.variable} font-sans antialiased bg-white text-gray-900 selection:bg-[#B00D1C]/20 selection:text-[#B00D1C]`}
         style={{ fontFamily: 'var(--font-poppins)' }}
       >
+        <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );
