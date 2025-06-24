@@ -10,7 +10,7 @@ export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
 
   const navLinks = [
-    { name: 'Home', href: '#home' },
+    { name: 'Home', href: '/' },
     { name: 'Services', href: '#service' },
     { name: 'Works', href: '#portfolio' },
     // { name: 'Contact', href: '#contact' },
