@@ -15,6 +15,7 @@ export default async function ServiceDetailPage({ params }: Props) {
   if (!service) return notFound();
 
   return (
+    
     <div className="min-h-screen bg-gradient-to-br from-gray-50  mt-12 via-white to-gray-100">
       
 
@@ -43,6 +44,19 @@ export default async function ServiceDetailPage({ params }: Props) {
           
         </div>
 
+        {service.coverImage && (
+          <div className="mb-12 rounded-2xl overflow-hidden shadow-lg">
+            <Image
+              src={service.coverImage}
+              alt={service.title}
+              width={1200}
+              height={500}
+              className="w-full h-72 md:h-96 object-cover"
+              priority
+            />
+          </div>
+        )}
+
         {/* Content Section */}
         <div className="mb-20">
           <div className="bg-white rounded-3xl shadow-xl p-8 md:p-12 border border-gray-100">
@@ -50,9 +64,68 @@ export default async function ServiceDetailPage({ params }: Props) {
               <h2 className="text-2xl md:text-3xl font-bold mb-8 text-gray-900">
                 My Approach
               </h2>
-              <div className="prose prose-lg max-w-none text-gray-700 leading-relaxed whitespace-pre-line">
-                {service.content}
+              <div className="prose prose-lg max-w-none text-gray-700 leading-relaxed whitespace-pre-line mb-10">
+                {service.approach}
               </div>
+              {/* Process Section */}
+              {service.process && service.process.length > 0 && (
+                <div className="mt-12">
+                  <h3 className="text-2xl font-bold mb-8 text-gray-900 flex items-center gap-3">
+                    <div className="w-8 h-8 bg-gradient-to-r from-[#B00D1C] to-red-600 rounded-lg flex items-center justify-center">
+                      <Code className="w-4 h-4 text-white" />
+                    </div>
+                    My Process
+                  </h3>
+                  
+                  <div className="grid gap-6 md:gap-8">
+                    {service.process.map((step, idx) => (
+                      <div key={idx} className="relative group">
+                        {/* Timeline connector line */}
+                        {idx !== service.process.length - 1 && (
+                          <div className="absolute left-6 top-16 w-0.5 h-16 bg-gradient-to-b from-[#B00D1C]/30 to-gray-200 hidden md:block" />
+                        )}
+                        
+                        <div className="flex items-start gap-6 p-6 bg-gradient-to-r from-gray-50 to-white rounded-2xl border border-gray-100 hover:border-[#B00D1C]/20 hover:shadow-lg transition-all duration-300 group-hover:translate-x-1">
+                          {/* Step number */}
+                          <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-[#B00D1C] to-red-600 rounded-xl flex items-center justify-center text-white font-bold text-lg shadow-lg group-hover:scale-110 transition-transform duration-300">
+                            {String(idx + 1).padStart(2, '0')}
+                          </div>
+                          
+                          {/* Step content */}
+                          <div className="flex-1 min-w-0">
+                            <h4 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-[#B00D1C] transition-colors duration-300">
+                              {step.title}
+                            </h4>
+                            <p className="text-gray-700 leading-relaxed">
+                              {step.description}
+                            </p>
+                          </div>
+                          
+                          {/* Arrow indicator */}
+                          <div className="flex-shrink-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            
+                          </div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                  
+                  {/* Process summary */}
+                  <div className="mt-8 p-6 bg-gradient-to-r from-[#B00D1C]/5 to-red-50 rounded-2xl border border-[#B00D1C]/10">
+                    <div className="flex items-start gap-4">
+                      <div className="w-8 h-8 bg-[#B00D1C]/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                        <Award className="w-4 h-4 text-[#B00D1C]" />
+                      </div>
+                      <div>
+                        <h4 className="font-semibold text-gray-900 mb-2">Why This Process Works</h4>
+                        <p className="text-gray-700 text-sm leading-relaxed">
+                          {service.processSummary}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              )}
             </div>
           </div>
         </div>
@@ -181,7 +254,7 @@ export async function generateMetadata({ params }: Props) {
   const service = services.find((s) => s.slug === slug);
   
   return {
-    title: `${service?.title} | Your Name`,
+    title: `${service?.title} | Brian Ceasar`,
     description: service?.description,
     openGraph: {
       images: [service?.coverImage],
