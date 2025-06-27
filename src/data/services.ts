@@ -4,7 +4,7 @@ import {
   Smartphone,
   Database,
   Settings2,
-  Image as ImageIcon,
+  // Image as ImageIcon,
   LucideIcon,
 } from 'lucide-react';
 
