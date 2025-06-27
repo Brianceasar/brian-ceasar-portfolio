@@ -34,6 +34,7 @@ export type Service = {
   samples: Project[];
   process: ProcessStep[];
   approach: string;
+  processSummary: string;
 };
 
 export const services: Service[] = [
@@ -55,6 +56,9 @@ export const services: Service[] = [
       { title: 'Development', description: 'Build responsive interfaces using React and Tailwind CSS.' },
       { title: 'Testing & Launch', description: 'QA, optimize, and deploy to production.' },
     ],
+    processSummary: `
+      My front-end development process ensures that every interface is responsive, accessible, and optimized for performance, from initial consultation through to final deployment.
+    `,
     samples: [
       {
         title: 'Studio 19 Website Development',
@@ -109,6 +113,9 @@ export const services: Service[] = [
       { title: 'Prototyping', description: 'Build interactive prototypes for testing.' },
       { title: 'Design Handoff', description: 'Deliver final assets and specs to developers.' },
     ],
+    processSummary: `
+      My UI/UX design process ensures that every interface is intuitive, visually appealing, and tailored to user needs, from research through to final handoff.
+    `,
     samples: [
       {
         title: 'Fintech Dashboard',
@@ -136,7 +143,7 @@ export const services: Service[] = [
     title: 'Database Management',
     description: 'Managing and optimizing SQL and NoSQL databases efficiently.',
     color: '#eab830',
-    coverImage: '/images/services/database.jpg',
+    coverImage: '/assets/img/services/database.png',
     content: `I design, implement, and maintain robust database solutions, ensuring data integrity, security, and performance.`,
     approach: 'Design scalable, secure, and high-performance databases tailored to business needs.',
     process: [
@@ -145,6 +152,9 @@ export const services: Service[] = [
       { title: 'Implementation', description: 'Set up, migrate, and optimize databases.' },
       { title: 'Maintenance', description: 'Monitor, backup, and tune for ongoing performance.' },
     ],
+    processSummary: `
+      My database management process ensures that your data is secure, accessible, and optimized for performance, from initial assessment through to ongoing maintenance.
+    `,
     samples: [
       {
         title: 'Inventory Database',
@@ -172,7 +182,7 @@ export const services: Service[] = [
     title: 'Software Project Management',
     description: 'Managing software projects and leading teams to deliver high-quality solutions.',
     color: '#B00D1C',
-    coverImage: '/images/services/project-management.jpg',
+    coverImage: '/assets/img/services/project-management.png',
     content: `I lead software teams to deliver robust, scalable, and maintainable solutions. My approach involves agile methodologies, clear communication, and a focus on quality and timely delivery.`,
     approach: 'Lead teams with agile practices, clear milestones, and transparent communication.',
     process: [
@@ -181,6 +191,9 @@ export const services: Service[] = [
       { title: 'Execution', description: 'Oversee development and resolve blockers.' },
       { title: 'Delivery', description: 'Ensure quality and deliver on schedule.' },
     ],
+    processSummary: `
+      My project management process ensures that software projects are delivered on time, within scope, and to the highest quality standards, leveraging agile methodologies and effective team collaboration.
+    `,
     samples: [
       {
         title: 'ERP Implementation',
@@ -202,49 +215,52 @@ export const services: Service[] = [
       },
     ],
   },
-  {
-    slug: 'graphic-design',
-    icon: ImageIcon,
-    title: 'Graphic Design',
-    description: 'Designing visual assets for digital/print using tools like Photoshop and Figma.',
-    color: '#ff1949',
-    coverImage: '/images/services/graphic-design.jpg',
-    content: `I create compelling graphics for branding, marketing, and digital campaigns, ensuring consistency and creativity.`,
-    approach: 'Blend creativity with brand strategy to deliver memorable visual assets.',
-    process: [
-      { title: 'Briefing', description: 'Understand brand and campaign goals.' },
-      { title: 'Concepting', description: 'Sketch and propose creative directions.' },
-      { title: 'Design', description: 'Produce high-quality graphics and layouts.' },
-      { title: 'Delivery', description: 'Export assets for print and digital use.' },
-    ],
-    samples: [
-      {
-        title: 'Brand Kit',
-        slug: 'brand-kit',
-        img: '/images/projects/brand-kit.jpg',
-        client: 'NovaBrand',
-        techStack: ['Adobe Illustrator', 'Photoshop'],
-        achievement: 'Brand recognized in 50+ publications',
-        content: 'Developed a full brand kit including logo, palette, and typography.',
-      },
-      {
-        title: 'Social Media Campaign',
-        slug: 'social-campaign',
-        img: '/images/projects/social-campaign.jpg',
-        client: 'EcoLife',
-        techStack: ['Figma', 'Photoshop'],
-        achievement: 'Campaign reached 100k+ users',
-        content: 'Designed graphics for a viral social media campaign.',
-      },
-    ],
-  },
+  // {
+  //   slug: 'graphic-design',
+  //   icon: ImageIcon,
+  //   title: 'Graphic Design',
+  //   description: 'Designing visual assets for digital/print using tools like Photoshop and Figma.',
+  //   color: '#ff1949',
+  //   coverImage: '/images/services/graphic-design.jpg',
+  //   content: `I create compelling graphics for branding, marketing, and digital campaigns, ensuring consistency and creativity.`,
+  //   approach: 'Blend creativity with brand strategy to deliver memorable visual assets.',
+  //   process: [
+  //     { title: 'Briefing', description: 'Understand brand and campaign goals.' },
+  //     { title: 'Concepting', description: 'Sketch and propose creative directions.' },
+  //     { title: 'Design', description: 'Produce high-quality graphics and layouts.' },
+  //     { title: 'Delivery', description: 'Export assets for print and digital use.' },
+  //   ],
+  //   processSummary: `
+  //     My graphic design process combines creativity with strategic thinking to produce visual assets that resonate with audiences and elevate brand identity, from initial briefing through to final delivery.
+  //   `,
+  //   samples: [
+  //     {
+  //       title: 'Brand Kit',
+  //       slug: 'brand-kit',
+  //       img: '/images/projects/brand-kit.jpg',
+  //       client: 'NovaBrand',
+  //       techStack: ['Adobe Illustrator', 'Photoshop'],
+  //       achievement: 'Brand recognized in 50+ publications',
+  //       content: 'Developed a full brand kit including logo, palette, and typography.',
+  //     },
+  //     {
+  //       title: 'Social Media Campaign',
+  //       slug: 'social-campaign',
+  //       img: '/images/projects/social-campaign.jpg',
+  //       client: 'EcoLife',
+  //       techStack: ['Figma', 'Photoshop'],
+  //       achievement: 'Campaign reached 100k+ users',
+  //       content: 'Designed graphics for a viral social media campaign.',
+  //     },
+  //   ],
+  // },
   {
     slug: 'app-development',
     icon: Smartphone,
     title: 'App Development',
     description: 'Developing cross-platform and native mobile applications.',
     color: '#10bcc4',
-    coverImage: '/images/services/app-dev.jpg',
+    coverImage: '/assets/img/services/app-dev.png',
     content: `I build robust mobile apps for iOS and Android, focusing on performance, usability, and scalability.`,
     approach: 'Deliver seamless mobile experiences with scalable, maintainable codebases.',
     process: [
@@ -253,6 +269,9 @@ export const services: Service[] = [
       { title: 'Development', description: 'Build and test mobile apps for iOS/Android.' },
       { title: 'Launch & Support', description: 'Deploy to stores and provide ongoing updates.' },
     ],
+    processSummary: `
+      My app development process ensures that mobile applications are built to the highest standards of performance and user experience, from initial discovery through to launch and ongoing support.
+    `,
     samples: [
       {
         title: 'Fitness Tracker App',
