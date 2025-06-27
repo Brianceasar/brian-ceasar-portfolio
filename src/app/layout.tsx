@@ -4,6 +4,7 @@ import '../../styles/globals.css'; // Tailwind
 import '../../styles/legacy.css';   // Your custom styles
 import Navbar from '../components/Navbar/Navbar';
 import Footer from '../components/Footer/Footer';
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 
 const poppins = Poppins({
@@ -40,6 +41,7 @@ export default function RootLayout({
         <Navbar />
         {children}
         <Footer />
+        <SpeedInsights />
       </body>
     </html>
   );
