@@ -15,14 +15,14 @@ type Project = {
 const projects: Project[] = [
   {
     title: 'Studio 19 Website Revamp',
-    image: '/assets/img/s19-portfolio.jfif',
+    image: '/assets/img/s19-portfolio.png',
     link: 'https://studio19.co.tz/',
     description: 'Complete website redesign with modern UI/UX',
     tags: ['React', 'Next.js', 'Design'],
   },
   {
     title: 'Wabahai wa Tanzania Website',
-    image: '/assets/img/bahai-landing-page.jfif',
+    image: '/assets/img/bahai-landing-page.png',
     link: 'https://bahai.or.tz/',
     description: 'Community website with multilingual support',
     tags: ['Web Development', 'CMS', 'Responsive'],
