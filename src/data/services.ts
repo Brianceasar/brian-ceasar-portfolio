@@ -43,7 +43,7 @@ export const services: Service[] = [
     title: 'Front-End Development',
     description: 'Responsive UI development using React, Next.js and Tailwind CSS.',
     color: '#d94da6',
-    coverImage: '/assets/img/service-2.jpg',
+    coverImage: '/assets/img/services/frontend-development.png',
     content: `
       I specialize in building high-performance user interfaces using React, Tailwind CSS, and Next.js.
       For each project, I focus on speed, accessibility, responsiveness, and clean component architecture.
@@ -100,7 +100,7 @@ export const services: Service[] = [
     title: 'UI/UX Design',
     description: 'Creating intuitive and beautiful user interfaces and experiences.',
     color: '#307ad5',
-    coverImage: '/images/services/ui-ux.jpg',
+    coverImage: '/assets/img/services/ui-ux.png',
     content: `I design user-centric interfaces that are both visually appealing and easy to use. My process includes wireframing, prototyping, and user testing.`,
     approach: 'Empathize with users, iterate on feedback, and deliver delightful digital experiences.',
     process: [

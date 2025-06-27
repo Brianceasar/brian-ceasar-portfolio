@@ -15,6 +15,7 @@ export default async function ServiceDetailPage({ params }: Props) {
   if (!service) return notFound();
 
   return (
+    
     <div className="min-h-screen bg-gradient-to-br from-gray-50  mt-12 via-white to-gray-100">
       
 
@@ -43,6 +44,19 @@ export default async function ServiceDetailPage({ params }: Props) {
           
         </div>
 
+        {service.coverImage && (
+          <div className="mb-12 rounded-2xl overflow-hidden shadow-lg">
+            <Image
+              src={service.coverImage}
+              alt={service.title}
+              width={1200}
+              height={500}
+              className="w-full h-72 md:h-96 object-cover"
+              priority
+            />
+          </div>
+        )}
+
         {/* Content Section */}
         <div className="mb-20">
           <div className="bg-white rounded-3xl shadow-xl p-8 md:p-12 border border-gray-100">
@@ -50,9 +64,23 @@ export default async function ServiceDetailPage({ params }: Props) {
               <h2 className="text-2xl md:text-3xl font-bold mb-8 text-gray-900">
                 My Approach
               </h2>
-              <div className="prose prose-lg max-w-none text-gray-700 leading-relaxed whitespace-pre-line">
-                {service.content}
+              <div className="prose prose-lg max-w-none text-gray-700 leading-relaxed whitespace-pre-line mb-10">
+                {service.approach}
               </div>
+              {/* Process Section */}
+              {service.process && service.process.length > 0 && (
+                <div className="mt-8">
+                  <h3 className="text-xl font-semibold mb-4 text-gray-900">Process</h3>
+                  <ol className="list-decimal pl-6 space-y-4">
+                    {service.process.map((step, idx) => (
+                      <li key={idx}>
+                        <span className="font-semibold">{step.title}:</span>{' '}
+                        <span className="text-gray-700">{step.description}</span>
+                      </li>
+                    ))}
+                  </ol>
+                </div>
+              )}
             </div>
           </div>
         </div>
