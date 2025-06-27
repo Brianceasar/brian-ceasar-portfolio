@@ -45,8 +45,8 @@ export const services: Service[] = [
     color: '#d94da6',
     coverImage: '/assets/img/service-2.jpg',
     content: `
-I specialize in building high-performance user interfaces using React, Tailwind CSS, and Next.js.
-For each project, I focus on speed, accessibility, responsiveness, and clean component architecture.
+      I specialize in building high-performance user interfaces using React, Tailwind CSS, and Next.js.
+      For each project, I focus on speed, accessibility, responsiveness, and clean component architecture.
     `,
     approach: 'Modern, component-driven development with a focus on accessibility, performance, and maintainability.',
     process: [
@@ -57,24 +57,24 @@ For each project, I focus on speed, accessibility, responsiveness, and clean com
     ],
     samples: [
       {
-        title: 'Studio 19 Website Revamp',
+        title: 'Studio 19 Website Development',
         slug: 'studio19',
-        img: '/assets/img/s19-portfolio.jfif',
+        img: '/assets/img/s19-portfolio.png',
         link: 'https://studio19.co.tz',
         content: `
-Studio 19 wanted a slick, mobile-first website. I designed the layout in Figma and implemented it using Next.js and Tailwind CSS. The site was deployed on Vercel with a blazing-fast build time and smooth animations.
+          Studio 19 wanted a slick, mobile-first website. I designed the layout in Figma and implemented it using Next.js and Tailwind CSS. The site was deployed on Vercel with a blazing-fast build time and smooth animations.
         `,
         client: 'Studio 19',
         techStack: ['Next.js', 'React', 'Tailwind CSS', 'Figma'],
         achievement: 'Launched in 2 weeks with 99+ Lighthouse scores',
       },
       {
-        title: 'Bahai Landing Page',
+        title: 'Bahai wa Tanzania Website Development',
         slug: 'bahai-landing',
-        img: '/assets/img/bahai-landing-page.jfif',
+        img: '/assets/img/bahai-landing-page.png',
         link: 'https://bahai.or.tz',
         content: `
-For Wabahai wa Tanzania, I designed and built a clean, spiritual landing page optimized for mobile. I used semantic HTML5, CSS grid, and integrated a lightweight CMS for easy updates.
+          For Wabahai wa Tanzania, I designed and built a clean, spiritual landing page optimized for mobile. I used semantic HTML5, CSS grid, and integrated a lightweight CMS for easy updates.
         `,
         client: 'Wabahai wa Tanzania',
         techStack: ['HTML5', 'CSS Grid', 'Next.js', 'CMS'],
@@ -86,7 +86,7 @@ For Wabahai wa Tanzania, I designed and built a clean, spiritual landing page op
         img: '/assets/img/imperium-opes.png',
         link: 'https://brianceasar.github.io/imperium-opes/',
         content: `
-Imperium Opes needed a financial services presence. I built a static site with HTML/CSS/JS, adding subtle animations and scroll triggers. Delivered fully responsive layout, asset compression, and SEO tags.
+          Imperium Opes needed a financial services presence. I built a static site with HTML/CSS/JS, adding subtle animations and scroll triggers. Delivered fully responsive layout, asset compression, and SEO tags.
         `,
         client: 'Imperium Opes',
         techStack: ['HTML', 'CSS', 'JavaScript'],
