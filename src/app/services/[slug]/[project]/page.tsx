@@ -16,7 +16,7 @@ export async function generateMetadata({ params }: Props) {
   const resolvedParams = await params;
   const service = services.find((s) => s.slug === resolvedParams.slug);
   const project = service?.samples?.find((p) => p.slug === resolvedParams.project);
-  
+
   return {
     title: `${project?.title || 'Project'} | ${service?.title || 'Service'}`,
     description: project?.content?.substring(0, 160) || 'Project details',
@@ -55,17 +55,38 @@ export default async function ProjectPage({ params }: Props) {
         )}
       </header>
 
-      <div className="relative aspect-video rounded-xl overflow-hidden shadow-lg mb-8 bg-gray-100">
+      <div className="relative h-[500px] w-full rounded-xl overflow-hidden shadow-lg mb-8 bg-gray-100">
         <Image
           src={project.img}
           alt={project.title}
           fill
-          className="object-cover"
+          className="object-contain"
           priority
         />
       </div>
 
       <div className="prose prose-lg max-w-none">
+        {project.organisation && (
+          <section className="mb-8">
+            <h2 className="text-xl font-semibold mb-4 text-gray-900">Understanding the Organisation</h2>
+            <p className="text-gray-700 whitespace-pre-line">{project.organisation}</p>
+          </section>
+        )}
+
+        {project.problem && (
+          <section className="mb-8">
+            <h2 className="text-xl font-semibold mb-4 text-gray-900">Understanding the Problem</h2>
+            <p className="text-gray-700 whitespace-pre-line">{project.problem}</p>
+          </section>
+        )}
+
+        {project.approach && (
+          <section className="mb-8">
+            <h2 className="text-xl font-semibold mb-4 text-gray-900">Methodology and Approach</h2>
+            <p className="text-gray-700 whitespace-pre-line">{project.approach}</p>
+          </section>
+        )}
+
         <div className="whitespace-pre-line text-gray-700 leading-relaxed">
           {project.content}
         </div>

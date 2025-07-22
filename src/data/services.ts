@@ -17,6 +17,9 @@ export type Project = {
   client?: string;
   techStack?: string[];
   achievement?: string;
+  organisation?: string;
+  problem?: string;
+  approach?: string;
 };
 export type ProcessStep = {
   title: string;
@@ -61,17 +64,26 @@ export const services: Service[] = [
     `,
     samples: [
       {
-        title: 'Studio 19 Website Development',
-        slug: 'studio19',
-        img: '/assets/img/s19-portfolio.png',
-        link: 'https://studio19.co.tz',
-        content: `
-          Studio 19 wanted a slick, mobile-first website. I designed the layout in Figma and implemented it using Next.js and Tailwind CSS. The site was deployed on Vercel with a blazing-fast build time and smooth animations.
-        `,
-        client: 'Studio 19',
-        techStack: ['Next.js', 'React', 'Tailwind CSS', 'Figma'],
-        achievement: 'Launched in 2 weeks with 99+ Lighthouse scores',
-      },
+  title: 'Studio 19 Website Development',
+  slug: 'studio19',
+  img: '/assets/img/s19-portfolio.png',
+  link: 'https://studio19.co.tz',
+  client: 'Studio 19',
+  content: `The project delivered a responsive, modern site showcasing Studio 19’s video production portfolio, team, and contact details.`,
+  organisation: `Studio 19 is a creative media agency based in Tanzania, specializing in video production, media strategy, and digital storytelling for commercial and social impact campaigns.`,
+  problem: `Studio 19 lacked a modern digital presence to reflect the quality of their work and had no centralized space for showcasing past projects, making it difficult for potential clients to assess their expertise.`,
+  approach: `
+            1. Project Initiation and Planning  
+            2. Requirement Gathering and Wireframing  
+            3. High-Fidelity UI Design in Figma  
+            4. Frontend Development using Html, Javascript and Tailwind CSS  
+            5. Content Integration   
+            6. Testing (Mobile-first, Performance, Accessibility)  
+            7. Deployment and Analytics Setup  
+            `,
+  techStack: ['Html', 'Javascript', 'Tailwind CSS', 'Figma'],
+  achievement: 'The site launched within two weeks and significantly improved the client’s digital presence, including a 40% increase in inquiries through the contact form.'
+},
       {
         title: 'Bahai wa Tanzania Website Development',
         slug: 'bahai-landing',
@@ -85,40 +97,72 @@ export const services: Service[] = [
         achievement: 'Mobile-first, 100% accessibility score',
       },
       {
-        title: 'Zaobora',
+        title: 'Zaobora Website Development',
         slug: 'Zaobora',
         img: '/assets/img/zaobora.png',
         link: 'https://zaobora.co.tz',
         content: `
           Zao Bora partnered with Byte Solution to develop a clean, responsive website that showcases their agricultural initiatives and boosts their online visibility. The platform was designed to support Zao Bora’s mission of empowering farmers through consultation, market linkage, and agroforestry with carbon market applications.
         `,
+        organisation: `Zao Bora is a community-focused agricultural organization that supports sustainable farming practices across Tanzania. It offers farmers consultation, market access, and agroforestry solutions with carbon market potential. The organization bridges grassroots impact with investment opportunities, helping both rural farmers and global partners collaborate through digital transformation.`,
+
+  problem: `Zao Bora needed an online platform to broaden its reach, build credibility, and simplify the connection between farmers and external stakeholders like donors, buyers, and carbon market investors. Previously reliant on manual outreach, Zao Bora lacked a centralized, accessible, and professional digital presence to communicate its value and scale impact.`,
+
+  approach: `1. Project Initiation and Requirements Gathering with Stakeholders  
+            2. User Persona Research (Farmers, Donors, Investors)  
+            3. Minimalistic UI Design using Earth-Tone Palette  
+            4. Sitemap Architecture for 6–8 Page Static Website  
+            5. Content Creation: Services, Agroforestry, Testimonials  
+            6. Development of Static Website with Mobile-First Layout  
+            7. Domain Setup and Shared Hosting Configuration  
+            8. Final Testing, Optimization, and Email Configuration  
+            9. Handover and Support Guidelines`,
         client: 'Zaobora',
         techStack: ['HTML', 'CSS', 'JavaScript'],
-        achievement: 'SEO optimized, fast load, subtle animations',
+        achievement: 'Delivered a clean and responsive 8-page static website that clearly showcases Zao Bora’s mission and services. Enabled the client to begin engaging investors and donors within four weeks of launch while simplifying communication with farmers through a mobile-friendly, low-bandwidth interface.',
       },
       {
-        title: 'Counsenauth',
+        title: 'Counsenauth Website Development',
         slug: 'Counsenauth',
         img: '/assets/img/counsenauth-hero.png',
         link: 'https://counsenuth.or.tz',
-        content: `
-          COUNSENUTH partnered with Byte Solution to audit, update, and enhance its existing website. The primary goal was to resolve broken links, update outdated content, and improve overall functionality to better reflect the organization’s ongoing work in maternal and child nutrition.
-        `,
-        client: 'Counsenauth',
-        techStack: ['Wordpress', 'PHP', 'JavaScript'],
-        achievement: 'SEO optimized, fast load, subtle animations',
+        client: 'COUNSENUTH',
+        content: `COUNSENUTH partnered with Byte Solution to modernize and maintain their official website. The site serves as a resource hub for the organization’s work in maternal and child nutrition across Tanzania. Our goal was to ensure the site reflected the ongoing programs, remained accessible to a diverse audience, and met current web standards.`,
+  organisation: `COUNSENUTH is a Tanzanian NGO working to improve community health and nutrition, with a special focus on vulnerable groups including women, children, and adolescents. The organization collaborates with communities, government institutions, and development partners to deliver impactful programs and advocacy in maternal and child nutrition, education, and policy change.`,
+  problem: `The existing COUNSENUTH website had broken links, outdated content, and poor mobile responsiveness. Key stakeholders could not easily find or trust the information provided. The site also lacked visual consistency and did not reflect the full scope of COUNSENUTH’s work, limiting the organization’s ability to engage the public, funders, and partners.`,
+  approach: `1. Initial Audit and Site Assessment  
+            2. Fix Broken Pages, Links, and Navigation Structure  
+            3. Collect Updated Program and Organizational Content  
+            4. Redesign Key Sections to Reflect Active Projects and Impact  
+            5. Integrate Visual Assets for Better Storytelling  
+            6. Implement Accessibility Improvements and Mobile Optimization  
+            7. Perform SEO Optimization and Submit to Search Engines  
+            8. Train COUNSENUTH Staff on Content Updates and Reporting  
+            9. Set up Maintenance Workflow for Quarterly Reviews`,
+  techStack: ['WordPress', 'PHP', 'JavaScript', 'Elementor', 'Yoast SEO'],
+  achievement: 'Resolved over 30+ broken elements, optimized for SEO, improved performance across desktop and mobile, and restored stakeholder trust through an improved visual and content experience. The new website now serves as a dynamic tool for awareness, fundraising, and partnership development.'
       },
       {
-        title: 'Tanzania Film Festival and Awards',
+        title: 'Tanzania Film Festival and Awards Website Development',
         slug: 'Taffa',
         img: '/assets/img/taffa-hero.png',
         link: 'https://taffafestival.or.tz',
         content: `
           Byte Solution developed a bilingual, user-friendly website for TAFFA to streamline the film submission process and make it easier for participants and attendees to access festival information.
         `,
-        client: 'Taffa',
+        client: 'Tanzania Film Festival and Awards (TAFFA)',
+        organisation: `TAFFA (Tanzania Film Festival and Awards) is an annual national event organized by the Tanzania Film Board, aiming to harness the power of film for social, cultural, and economic development. It brings together creatives, studios, investors, government bodies, and the public to showcase, celebrate, and advance the Tanzanian film industry through screenings, forums, exhibitions, and awards.`,
+        problem: `TAFFA needed a digital solution to simplify the film submission process, make the event program easily accessible, and ensure the site supported both English and Swahili users.`,
+        approach: `1. Requirements Gathering with TAFFA stakeholders  
+            2. Language Toggle System Planning (EN ↔ SW)  
+            3. Bilingual UI Design using Figma  
+            4. Integration of FilmFreeway submission system  
+            5. Embedding event calendar with Elfsight  
+            6. Form data collection via Tally  
+            7. Testing and accessibility optimization  
+            8. Go-live and stakeholder onboarding`,
         techStack: ['HTML', 'CSS', 'JavaScript'],
-        achievement: 'SEO optimized, fast load, subtle animations',
+        achievement: 'Successfully launched ahead of the festival, with over 1,000 submissions processed digitally and over 1,000 program views in both languages.',
       },
     ],
   },
