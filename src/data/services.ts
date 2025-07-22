@@ -64,37 +64,47 @@ export const services: Service[] = [
     `,
     samples: [
       {
-  title: 'Studio 19 Website Development',
-  slug: 'studio19',
-  img: '/assets/img/s19-portfolio.png',
-  link: 'https://studio19.co.tz',
-  client: 'Studio 19',
-  content: `The project delivered a responsive, modern site showcasing Studio 19’s video production portfolio, team, and contact details.`,
-  organisation: `Studio 19 is a creative media agency based in Tanzania, specializing in video production, media strategy, and digital storytelling for commercial and social impact campaigns.`,
-  problem: `Studio 19 lacked a modern digital presence to reflect the quality of their work and had no centralized space for showcasing past projects, making it difficult for potential clients to assess their expertise.`,
-  approach: `
-            1. Project Initiation and Planning  
-            2. Requirement Gathering and Wireframing  
-            3. High-Fidelity UI Design in Figma  
-            4. Frontend Development using Html, Javascript and Tailwind CSS  
-            5. Content Integration   
-            6. Testing (Mobile-first, Performance, Accessibility)  
-            7. Deployment and Analytics Setup  
-            `,
-  techStack: ['Html', 'Javascript', 'Tailwind CSS', 'Figma'],
-  achievement: 'The site launched within two weeks and significantly improved the client’s digital presence, including a 40% increase in inquiries through the contact form.'
-},
-      {
-        title: 'Bahai wa Tanzania Website Development',
-        slug: 'bahai-landing',
-        img: '/assets/img/bahai-landing-page.png',
-        link: 'https://bahai.or.tz',
+        title: 'Tanzania Film Festival and Awards Website Development',
+        slug: 'Taffa',
+        img: '/assets/img/taffa-hero.png',
+        link: 'https://taffafestival.or.tz',
         content: `
-          For Wabahai wa Tanzania, I designed and built a clean, spiritual landing page optimized for mobile. I used semantic HTML5, CSS grid, and integrated a lightweight CMS for easy updates.
+          Byte Solution developed a bilingual, user-friendly website for TAFFA to streamline the film submission process and make it easier for participants and attendees to access festival information.
         `,
-        client: 'Wabahai wa Tanzania',
-        techStack: ['HTML5', 'CSS Grid', 'Next.js', 'CMS'],
-        achievement: 'Mobile-first, 100% accessibility score',
+        client: 'Tanzania Film Festival and Awards (TAFFA)',
+        organisation: `TAFFA (Tanzania Film Festival and Awards) is an annual national event organized by the Tanzania Film Board, aiming to harness the power of film for social, cultural, and economic development. It brings together creatives, studios, investors, government bodies, and the public to showcase, celebrate, and advance the Tanzanian film industry through screenings, forums, exhibitions, and awards.`,
+        problem: `TAFFA needed a digital solution to simplify the film submission process, make the event program easily accessible, and ensure the site supported both English and Swahili users.`,
+        approach: `1. Requirements Gathering with TAFFA stakeholders  
+            2. Language Toggle System Planning (EN ↔ SW)  
+            3. Bilingual UI Design using Figma  
+            4. Integration of FilmFreeway submission system  
+            5. Embedding event calendar with Elfsight  
+            6. Form data collection via Tally  
+            7. Testing and accessibility optimization  
+            8. Go-live and stakeholder onboarding`,
+        techStack: ['HTML', 'CSS', 'JavaScript'],
+        achievement: 'Successfully launched ahead of the festival, with over 1,000 submissions processed digitally and over 1,000 program views in both languages.',
+      },
+      {
+        title: 'Counsenauth Website Development',
+        slug: 'Counsenauth',
+        img: '/assets/img/counsenauth-hero.png',
+        link: 'https://counsenuth.or.tz',
+        client: 'COUNSENUTH',
+        content: `COUNSENUTH partnered with Byte Solution to modernize and maintain their official website. The site serves as a resource hub for the organization’s work in maternal and child nutrition across Tanzania. Our goal was to ensure the site reflected the ongoing programs, remained accessible to a diverse audience, and met current web standards.`,
+  organisation: `COUNSENUTH is a Tanzanian NGO working to improve community health and nutrition, with a special focus on vulnerable groups including women, children, and adolescents. The organization collaborates with communities, government institutions, and development partners to deliver impactful programs and advocacy in maternal and child nutrition, education, and policy change.`,
+  problem: `The existing COUNSENUTH website had broken links, outdated content, and poor mobile responsiveness. Key stakeholders could not easily find or trust the information provided. The site also lacked visual consistency and did not reflect the full scope of COUNSENUTH’s work, limiting the organization’s ability to engage the public, funders, and partners.`,
+  approach: `1. Initial Audit and Site Assessment  
+            2. Fix Broken Pages, Links, and Navigation Structure  
+            3. Collect Updated Program and Organizational Content  
+            4. Redesign Key Sections to Reflect Active Projects and Impact  
+            5. Integrate Visual Assets for Better Storytelling  
+            6. Implement Accessibility Improvements and Mobile Optimization  
+            7. Perform SEO Optimization and Submit to Search Engines  
+            8. Train COUNSENUTH Staff on Content Updates and Reporting  
+            9. Set up Maintenance Workflow for Quarterly Reviews`,
+  techStack: ['WordPress', 'PHP', 'JavaScript', 'Elementor', 'Yoast SEO'],
+  achievement: 'Resolved over 30+ broken elements, optimized for SEO, improved performance across desktop and mobile, and restored stakeholder trust through an improved visual and content experience. The new website now serves as a dynamic tool for awareness, fundraising, and partnership development.'
       },
       {
         title: 'Zaobora Website Development',
@@ -122,47 +132,63 @@ export const services: Service[] = [
         achievement: 'Delivered a clean and responsive 8-page static website that clearly showcases Zao Bora’s mission and services. Enabled the client to begin engaging investors and donors within four weeks of launch while simplifying communication with farmers through a mobile-friendly, low-bandwidth interface.',
       },
       {
-        title: 'Counsenauth Website Development',
-        slug: 'Counsenauth',
-        img: '/assets/img/counsenauth-hero.png',
-        link: 'https://counsenuth.or.tz',
-        client: 'COUNSENUTH',
-        content: `COUNSENUTH partnered with Byte Solution to modernize and maintain their official website. The site serves as a resource hub for the organization’s work in maternal and child nutrition across Tanzania. Our goal was to ensure the site reflected the ongoing programs, remained accessible to a diverse audience, and met current web standards.`,
-  organisation: `COUNSENUTH is a Tanzanian NGO working to improve community health and nutrition, with a special focus on vulnerable groups including women, children, and adolescents. The organization collaborates with communities, government institutions, and development partners to deliver impactful programs and advocacy in maternal and child nutrition, education, and policy change.`,
-  problem: `The existing COUNSENUTH website had broken links, outdated content, and poor mobile responsiveness. Key stakeholders could not easily find or trust the information provided. The site also lacked visual consistency and did not reflect the full scope of COUNSENUTH’s work, limiting the organization’s ability to engage the public, funders, and partners.`,
-  approach: `1. Initial Audit and Site Assessment  
-            2. Fix Broken Pages, Links, and Navigation Structure  
-            3. Collect Updated Program and Organizational Content  
-            4. Redesign Key Sections to Reflect Active Projects and Impact  
-            5. Integrate Visual Assets for Better Storytelling  
-            6. Implement Accessibility Improvements and Mobile Optimization  
-            7. Perform SEO Optimization and Submit to Search Engines  
-            8. Train COUNSENUTH Staff on Content Updates and Reporting  
-            9. Set up Maintenance Workflow for Quarterly Reviews`,
-  techStack: ['WordPress', 'PHP', 'JavaScript', 'Elementor', 'Yoast SEO'],
-  achievement: 'Resolved over 30+ broken elements, optimized for SEO, improved performance across desktop and mobile, and restored stakeholder trust through an improved visual and content experience. The new website now serves as a dynamic tool for awareness, fundraising, and partnership development.'
-      },
+  title: 'Studio 19 Website Development',
+  slug: 'studio19',
+  img: '/assets/img/s19-portfolio.png',
+  link: 'https://studio19.co.tz',
+  client: 'Studio 19',
+  content: `The project delivered a responsive, modern site showcasing Studio 19’s video production portfolio, team, and contact details.`,
+  organisation: `Studio 19 is a creative media agency based in Tanzania, specializing in video production, media strategy, and digital storytelling for commercial and social impact campaigns.`,
+  problem: `Studio 19 lacked a modern digital presence to reflect the quality of their work and had no centralized space for showcasing past projects, making it difficult for potential clients to assess their expertise.`,
+  approach: `
+            1. Project Initiation and Planning  
+            2. Requirement Gathering and Wireframing  
+            3. High-Fidelity UI Design in Figma  
+            4. Frontend Development using Html, Javascript and Tailwind CSS  
+            5. Content Integration   
+            6. Testing (Mobile-first, Performance, Accessibility)  
+            7. Deployment and Analytics Setup  
+            `,
+  techStack: ['Html', 'Javascript', 'Tailwind CSS', 'Figma'],
+  achievement: 'The site launched within two weeks and significantly improved the client’s digital presence, including a 40% increase in inquiries through the contact form.'
+},
+{
+  "title": "Dynamic Event Management Integration",
+  "slug": "19events-dynamic-events",
+  "img": "/assets/img/19-events-web-development.png",
+  "link": "https://19events.co.tz",
+  "client": "19Events Limited",
+  "content": "Developed a static website enhancement allowing dynamic rendering of event pages using a centralized JSON file, enabling non-technical users to update events without backend support.",
+  "organisation": "19Events Limited is a Tanzanian event production company offering comprehensive planning, organizing, and branding services for both private and corporate functions.",
+  "problem": "The client struggled with updating events on their static website, requiring developer involvement for every change and lacking consistency across event pages.",
+  "approach": "1. Project Initiation and Planning\n2. Requirement Gathering and Analysis\n3. JSON Schema Definition for Events\n4. Frontend Development with Vanilla JS, HTML, and CSS\n5. Dynamic Rendering of Event Pages\n6. Responsive UI Implementation\n7. Testing and Client Training",
+  "techStack": ["HTML", "CSS", "JavaScript", "JSON"],
+  "achievement": "Enabled the client to independently manage and publish new events via a single JSON file, reducing reliance on developers and improving site consistency."
+},
+{
+  "title": "Bahai Reference Library ",
+  "slug": "bahai-library",
+  "img": "/assets/img/bahai-library.png",
+  "link": "https://bahai.or.tz",
+  "client": "Bahai Community of Tanzania",
+  "content": "Developed a clean, static library page allowing visitors to search and access categorized Bahá’í writings via downloadable PDFs, enhancing spiritual learning and accessibility for community members.",
+  "organisation": "The Bahai Community of Tanzania is a faith-based organization promoting spiritual education, unity, and service in communities throughout the country.",
+  "problem": "The community lacked a digital resource that consolidated Bahá’í writings in one accessible place, making it hard for members to locate and engage with essential spiritual texts.",
+  "approach": "1. Project Initiation and Scope Planning\n2. Content Organization and Reference Gathering\n3. UI Design Focused on Minimalism and Readability\n4. Frontend Development Using HTML, CSS, and JavaScript\n5. Search Function and Category Filters Implementation\n6. Integration of External PDF Resources\n7. Testing Across Devices and Deployment",
+  "techStack": ["HTML", "CSS", "JavaScript"],
+  "achievement": "The Library page launched on schedule, improving access to Bahá’í writings and allowing users to locate relevant texts easily via categorized links and a search interface."
+},
       {
-        title: 'Tanzania Film Festival and Awards Website Development',
-        slug: 'Taffa',
-        img: '/assets/img/taffa-hero.png',
-        link: 'https://taffafestival.or.tz',
+        title: 'Bahai wa Tanzania Website Development',
+        slug: 'bahai-landing',
+        img: '/assets/img/bahai-landing-page.png',
+        link: 'https://bahai.or.tz',
         content: `
-          Byte Solution developed a bilingual, user-friendly website for TAFFA to streamline the film submission process and make it easier for participants and attendees to access festival information.
+          For Wabahai wa Tanzania, I designed and built a clean, spiritual landing page optimized for mobile. I used semantic HTML5, CSS grid, and integrated a lightweight CMS for easy updates.
         `,
-        client: 'Tanzania Film Festival and Awards (TAFFA)',
-        organisation: `TAFFA (Tanzania Film Festival and Awards) is an annual national event organized by the Tanzania Film Board, aiming to harness the power of film for social, cultural, and economic development. It brings together creatives, studios, investors, government bodies, and the public to showcase, celebrate, and advance the Tanzanian film industry through screenings, forums, exhibitions, and awards.`,
-        problem: `TAFFA needed a digital solution to simplify the film submission process, make the event program easily accessible, and ensure the site supported both English and Swahili users.`,
-        approach: `1. Requirements Gathering with TAFFA stakeholders  
-            2. Language Toggle System Planning (EN ↔ SW)  
-            3. Bilingual UI Design using Figma  
-            4. Integration of FilmFreeway submission system  
-            5. Embedding event calendar with Elfsight  
-            6. Form data collection via Tally  
-            7. Testing and accessibility optimization  
-            8. Go-live and stakeholder onboarding`,
-        techStack: ['HTML', 'CSS', 'JavaScript'],
-        achievement: 'Successfully launched ahead of the festival, with over 1,000 submissions processed digitally and over 1,000 program views in both languages.',
+        client: 'Wabahai wa Tanzania',
+        techStack: ['HTML5', 'CSS Grid', 'Next.js', 'CMS'],
+        achievement: 'Mobile-first, 100% accessibility score',
       },
     ],
   },
@@ -185,24 +211,7 @@ export const services: Service[] = [
       My UI/UX design process ensures that every interface is intuitive, visually appealing, and tailored to user needs, from research through to final handoff.
     `,
     samples: [
-      {
-        title: 'Fintech Dashboard',
-        slug: 'fintech-dashboard',
-        img: '/images/projects/fintech-dashboard.jpg',
-        client: 'FintechPro',
-        techStack: ['Figma', 'Adobe XD'],
-        achievement: 'Reduced user onboarding time by 50%',
-        content: 'Designed a dashboard for financial analytics and reporting.',
-      },
-      {
-        title: 'E-commerce App UI',
-        slug: 'ecommerce-app',
-        img: '/images/projects/ecommerce-app.jpg',
-        client: 'ShopEase',
-        techStack: ['Figma'],
-        achievement: 'Increased checkout conversion by 25%',
-        content: 'Created a mobile-first UI for an e-commerce platform.',
-      },
+      
     ],
   },
   {
@@ -224,24 +233,7 @@ export const services: Service[] = [
       My database management process ensures that your data is secure, accessible, and optimized for performance, from initial assessment through to ongoing maintenance.
     `,
     samples: [
-      {
-        title: 'Inventory Database',
-        slug: 'inventory-db',
-        img: '/images/projects/inventory-db.jpg',
-        client: 'RetailMart',
-        techStack: ['PostgreSQL', 'Node.js'],
-        achievement: 'Improved query speed by 300%',
-        content: 'Migrated legacy inventory data to a scalable PostgreSQL solution.',
-      },
-      {
-        title: 'Analytics NoSQL DB',
-        slug: 'analytics-nosql',
-        img: '/images/projects/analytics-nosql.jpg',
-        client: 'DataInsights',
-        techStack: ['MongoDB', 'Express.js'],
-        achievement: 'Enabled real-time dashboarding for 1M+ records',
-        content: 'Set up a MongoDB cluster for real-time analytics.',
-      },
+      
     ],
   },
   {
@@ -263,24 +255,7 @@ export const services: Service[] = [
       My project management process ensures that software projects are delivered on time, within scope, and to the highest quality standards, leveraging agile methodologies and effective team collaboration.
     `,
     samples: [
-      {
-        title: 'ERP Implementation',
-        slug: 'acme-erp',
-        img: '/images/projects/acme-erp.jpg',
-        client: 'Acme Corp',
-        techStack: ['Node.js', 'React', 'PostgreSQL'],
-        achievement: 'Reduced operational costs by 20%',
-        content: 'Oversaw the end-to-end implementation of a custom ERP system.',
-      },
-      {
-        title: 'CRM Rollout',
-        slug: 'globex-crm',
-        img: '/images/projects/globex-crm.jpg',
-        client: 'Globex Inc.',
-        techStack: ['Django', 'Vue.js', 'MySQL'],
-        achievement: 'Improved customer retention by 15%',
-        content: 'Managed a team to deliver a CRM platform for sales and support.',
-      },
+      
     ],
   },
   // {
@@ -341,25 +316,7 @@ export const services: Service[] = [
       My app development process ensures that mobile applications are built to the highest standards of performance and user experience, from initial discovery through to launch and ongoing support.
     `,
     samples: [
-      {
-        title: 'Fitness Tracker App',
-        slug: 'fitness-app',
-        img: '/images/projects/fitness-app.jpg',
-        client: 'FitTrack',
-        techStack: ['React Native', 'Expo'],
-        achievement: '10k+ downloads in first month',
-        content: 'Developed a cross-platform fitness tracking app.',
-        link: 'https://fittrack.example.com',
-      },
-      {
-        title: 'Food Delivery App',
-        slug: 'food-delivery',
-        img: '/images/projects/food-delivery.jpg',
-        client: 'QuickEats',
-        techStack: ['Kotlin', 'Firebase'],
-        achievement: 'Handled 5k+ orders/day at launch',
-        content: 'Built a native Android app for food delivery.',
-      },
+      
     ],
   },
 ];
