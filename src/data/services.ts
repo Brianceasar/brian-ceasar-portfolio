@@ -85,14 +85,38 @@ export const services: Service[] = [
         achievement: 'Mobile-first, 100% accessibility score',
       },
       {
-        title: 'Imperium Opes Website',
-        slug: 'imperium-opes',
-        img: '/assets/img/imperium-opes.png',
-        link: 'https://brianceasar.github.io/imperium-opes/',
+        title: 'Zaobora',
+        slug: 'Zaobora',
+        img: '/assets/img/zaobora.png',
+        link: 'https://zaobora.co.tz',
         content: `
-          Imperium Opes needed a financial services presence. I built a static site with HTML/CSS/JS, adding subtle animations and scroll triggers. Delivered fully responsive layout, asset compression, and SEO tags.
+          Zao Bora partnered with Byte Solution to develop a clean, responsive website that showcases their agricultural initiatives and boosts their online visibility. The platform was designed to support Zao Bora’s mission of empowering farmers through consultation, market linkage, and agroforestry with carbon market applications.
         `,
-        client: 'Imperium Opes',
+        client: 'Zaobora',
+        techStack: ['HTML', 'CSS', 'JavaScript'],
+        achievement: 'SEO optimized, fast load, subtle animations',
+      },
+      {
+        title: 'Counsenauth',
+        slug: 'Counsenauth',
+        img: '/assets/img/counsenauth-hero.png',
+        link: 'https://counsenuth.or.tz',
+        content: `
+          COUNSENUTH partnered with Byte Solution to audit, update, and enhance its existing website. The primary goal was to resolve broken links, update outdated content, and improve overall functionality to better reflect the organization’s ongoing work in maternal and child nutrition.
+        `,
+        client: 'Counsenauth',
+        techStack: ['Wordpress', 'PHP', 'JavaScript'],
+        achievement: 'SEO optimized, fast load, subtle animations',
+      },
+      {
+        title: 'Tanzania Film Festival and Awards',
+        slug: 'Taffa',
+        img: '/assets/img/taffa-hero.png',
+        link: 'https://taffafestival.or.tz',
+        content: `
+          Byte Solution developed a bilingual, user-friendly website for TAFFA to streamline the film submission process and make it easier for participants and attendees to access festival information.
+        `,
+        client: 'Taffa',
         techStack: ['HTML', 'CSS', 'JavaScript'],
         achievement: 'SEO optimized, fast load, subtle animations',
       },
