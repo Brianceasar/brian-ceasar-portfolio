@@ -171,7 +171,7 @@ export default function Hero() {
                 href="/assets/docs/Brian_Ceasar_CV_Web.pdf"
                 download
                 className="group flex items-center gap-2 bg-[#B00D1C] text-white font-semibold px-8 py-4 rounded-full hover:bg-[#D51515] hover:shadow-xl hover:shadow-[#B00D1C]/25 transition-all duration-300 transform hover:-translate-y-1"
-              >Brian_Ceasar_CV_Web
+              >
                 <Download className="w-4 h-4 group-hover:animate-bounce" />
                 Download CV
               </a>
